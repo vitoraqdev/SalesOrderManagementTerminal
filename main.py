@@ -18,7 +18,8 @@ Pedidos: #
 """
 
 from pedido import PedidosTerminal
-
+from prato import PratoTerminal
+from bairro import BairroTerminal
 
 class MenuTerminal:
     """
@@ -45,20 +46,32 @@ class MenuTerminal:
 
 
 if __name__ == "__main__":
-    MenuTerminal.menu_principal()
-    opcao = int(input("Opção: "))
-    if opcao == 1:
-        PedidosTerminal.menu_pedidos()
+    while True:
+        MenuTerminal.menu_principal()
         opcao = int(input("Opção: "))
         if opcao == 1:
-            PedidosTerminal.adicionar_pedido()
+            PedidosTerminal.menu_pedidos()
+            opcao = int(input("Opção: "))
+            if opcao == 1:
+                PedidosTerminal.adicionar_pedido()
+            elif opcao == 2:
+                PedidosTerminal.editar_pedido()
+            elif opcao == 3:
+                PedidosTerminal.remover_pedido()
+            elif opcao == 4:
+                PedidosTerminal.listar_pedidos()
+            elif opcao == 5:
+                PedidosTerminal.voltar()
+            else:
+                print("Opção inválida.")
         elif opcao == 2:
-            PedidosTerminal.editar_pedido()
+            pass
         elif opcao == 3:
-            PedidosTerminal.remover_pedido()
+            pass
         elif opcao == 4:
-            PedidosTerminal.listar_pedidos()
+            BairroTerminal()
         elif opcao == 5:
-            PedidosTerminal.voltar()
-        else:
-            print("Opção inválida.")
+            PratoTerminal()
+
+
+
