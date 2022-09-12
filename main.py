@@ -17,7 +17,7 @@ Pedidos: #
 8. Sair
 """
 
-from pedido import PedidosTerminal
+from pedido import PedidoTerminal
 
 
 class MenuTerminal:
@@ -48,17 +48,4 @@ if __name__ == "__main__":
     MenuTerminal.menu_principal()
     opcao = int(input("Opção: "))
     if opcao == 1:
-        PedidosTerminal.menu_pedidos()
-        opcao = int(input("Opção: "))
-        if opcao == 1:
-            PedidosTerminal.adicionar_pedido()
-        elif opcao == 2:
-            PedidosTerminal.editar_pedido()
-        elif opcao == 3:
-            PedidosTerminal.remover_pedido()
-        elif opcao == 4:
-            PedidosTerminal.listar_pedidos()
-        elif opcao == 5:
-            PedidosTerminal.voltar()
-        else:
-            print("Opção inválida.")
+        PedidoTerminal()
