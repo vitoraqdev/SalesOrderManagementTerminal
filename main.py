@@ -18,7 +18,9 @@ Pedidos: #
 """
 
 from pedido import PedidoTerminal
-
+from prato import PratoTerminal
+from bairro import BairroTerminal
+from motoboy import MotoboyTerminal
 
 class MenuTerminal:
     """
@@ -45,7 +47,18 @@ class MenuTerminal:
 
 
 if __name__ == "__main__":
-    MenuTerminal.menu_principal()
-    opcao = int(input("Opção: "))
-    if opcao == 1:
-        PedidoTerminal()
+    while True:
+        MenuTerminal.menu_principal()
+        opcao = int(input("Opção: "))
+        if opcao == 1:
+            PedidoTerminal()
+        elif opcao == 2:
+            pass
+        elif opcao == 3:
+            pass
+        elif opcao == 4:
+            BairroTerminal()
+        elif opcao == 5:
+            PratoTerminal()
+        elif opcao == 6:
+            MotoboyTerminal()
