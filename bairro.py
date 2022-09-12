@@ -1,7 +1,7 @@
 import requests
 from requests import Response
 
-from cliente import Cliente
+from customer import Client
 
 """
            Bairros

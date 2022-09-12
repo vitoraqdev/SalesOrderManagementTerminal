@@ -21,6 +21,7 @@ from pedido import PedidoTerminal
 from prato import PratoTerminal
 from bairro import BairroTerminal
 from motoboy import MotoboyTerminal
+from customer import CustomerTerminal
 
 class MenuTerminal:
     """
@@ -53,7 +54,7 @@ if __name__ == "__main__":
         if opcao == 1:
             PedidoTerminal()
         elif opcao == 2:
-            pass
+            CustomerTerminal()
         elif opcao == 3:
             pass
         elif opcao == 4:
