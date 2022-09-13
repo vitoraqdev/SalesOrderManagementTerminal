@@ -2,6 +2,7 @@
 Python terminal to be used with github.com/vitoraqdev/SalesOrderManagement
 """
 
+
 """
 Menu Principal
 ------------------------------
@@ -22,6 +23,7 @@ from prato import PratoTerminal
 from bairro import BairroTerminal
 from motoboy import MotoboyTerminal
 from customer import CustomerTerminal
+from address import AddressTerminal
 
 class MenuTerminal:
     """
@@ -56,7 +58,7 @@ if __name__ == "__main__":
         elif opcao == 2:
             CustomerTerminal()
         elif opcao == 3:
-            pass
+            AddressTerminal()
         elif opcao == 4:
             BairroTerminal()
         elif opcao == 5:

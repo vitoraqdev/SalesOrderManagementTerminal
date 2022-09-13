@@ -1,7 +1,7 @@
 import json
 
 import requests
-from cliente import Cliente
+from customer import Customer
 import datetime
 from pedido_detalhes import PedidoDetalhes
 from typing import Any
@@ -146,7 +146,7 @@ class PedidoTerminal:
         # CUSTOMER_ORDER
         date = datetime.date.today().strftime("%Y-%m-%d")
 
-        # Cliente.listar_clientes()
+        Customer.list()
         client_id = input("ID do cliente: ")
 
         # Motoboy.listar_motoboys()
