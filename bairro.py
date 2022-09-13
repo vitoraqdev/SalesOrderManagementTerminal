@@ -1,7 +1,7 @@
 import requests
 from requests import Response
 
-from customer import Client
+from customer import Customer
 
 """
            Bairros
@@ -86,7 +86,7 @@ class Bairro:
         response = requests.get(url)
         if response.status_code == 200:
             for bairro in response.json():
-                print(f"[{bairro['id']}] {bairro['name']} - R$ {bairro['delivery_fee']}")
+                print(f"[{bairro['id']}] {bairro['name']} - R$ {bairro['delivery_fee']:.2f}")
         else:
             print("Não foi possível listar os bairros.")
 
